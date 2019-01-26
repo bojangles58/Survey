@@ -1,0 +1,392 @@
+html,
+body {
+  font-family: 'Open Sans', Sans-Serif;
+  color: #2f4f4f;
+  background: LightGray;
+  font-size: 100%;
+}
+#main {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    width: 60%;
+    margin: auto;
+    background: #ffffff;
+    padding-left:50px;
+    padding-right:50px;
+}
+#title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 300%;
+  color: #fff;
+  background:#0000ff;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+}
+#description {
+  font-size: 200%;
+  color: #0000ff;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* Style input types, and textarea*/
+input[type=text],[type=email],[type=number],[type=radio-buttons],[type=tel], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  resize: vertical;
+}
+/*All labels*/
+label {
+  padding: 10px 10px 10px 0;
+  display: inline-block;
+  color: blue;
+}
+/*form*/
+#container {
+  border-radius: 5px;
+    background-color: lightblue;
+    padding: 25px;
+}
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 7px;
+}
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 7px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*age*/
+/*#number, input{
+  width: 10.7rem;
+  height: 1.5rem;
+  margin: 10px 0 0 0;*/
+#required {
+  font-size: 80%;
+  color: blue;
+  margin-top: -10px;
+}
+label, input  {
+  margin: 5px 0 15px 0;
+}
+.radio label input {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  padding-top: 10px;
+  font-size: 17px;
+  margin-left: -38px;
+  margin-top: -20px;
+  margin-bottom: -25px;
+  -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/*fieldset styling*/
+#radio-buttons {
+  border: 1px solid slateGray;
+  border-radius: 5px;
+  padding-bottom: 1px;
+  width: 100%;
+  resize: vertical;
+}
+/*checkbox styling*/
+.container {
+    display: block;
+    position: relative;
+    padding-left: 45px;
+    padding-top: 2px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 2px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/*days and times*/
+.form-group  {
+  display: flex;
+  margin-left: -2px;
+  margin-top: 30px;
+  margin-bottom: -10px;
+  position: block;
+}
+/*prefered times*/
+#form-control {
+  width: 10%;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 20px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+/*select multiple options dsys and times*/
+#days {
+  font-size: 80%;
+  color: #000;
+  margin-right: 60px;
+}
+/*paragraph*/
+#lunch {
+  margin-top: -5px;
+}
+/*select dietary option*/
+#diet {
+    font-size: 80%;
+  color: #000;
+  }
+.dropdown-menu label {
+  margin-left: -2px
+}
+/*comments box*/
+#comments-label {
+  font-size: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+#comments-label  {
+  margin-left: -2px;
+}
+#thanks {
+  color: #000;
+}
+#submit:hover {
+  cursor: pointer;
+  color: blue;
+  font-weight: 100;
+  font-size: 15px;
+  /*border: none;*/
+  border-radius: 4px;
+  background: yellow;
+  padding: 8px 16px;
+}
+/*footer*/
+.copyright {
+    margin-top: 70px;
+    background: #0000ff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    font-size: 100%;
+    text-align: center;
+}
+@media screen and (max-width: 768px) { /*mobile phone mode*/
+#main {
+    width: 90%;
+    margin: auto;
+}
+  #title {
+      font-size: 200%;
+}
+  #description {
+      font-size: 100%;
+}
+  .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+  }
+  #form-control {
+  width: 80%;
+    padding-right: 5px;
+  }
+.copyright {
+    font-size: 70%;
+    }
+}
+
+/*html,
+body {
+  font-family: 'Open Sans', Sans-Serif;
+  color: #2f4f4f;
+  background: LightGray;
+  font-size: 100%;
+}
+#main {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    width: 60%;
+    margin: auto;
+    background: #ffffff;
+    padding-left:50px;
+    padding-right:50px;
+}
+#title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 300%;
+  color: #fff;
+  background:#0000ff;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+}
+#description {
+  font-size: 200%;
+  color: #0000ff;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+#name, input  {
+  width: 10rem;
+  height: 1.5rem;
+  margin: 5px 0 0 0;
+}
+#lname, input{
+  width: 10rem;
+  height: 1.5rem;
+  margin: 20px 0 0 0;
+}
+/*age
+#number, input{
+  width: 13rem;
+  height: 1.5rem;
+  margin: 20px 0 0 0;
+}
+#email, input{
+	width: 12.3rem;
+  height: 1.5rem;
+	margin: 20px 0 0 0;
+}
+#required {
+  font-size: 80%;
+  color: red;
+}
+#tel, input  {
+  width: 12.5rem;
+  height: 1.5rem;
+  margin: 10px 0 30px 0;
+}
+#container input {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.radio, input {
+  cursor: pointer;
+  margin: 20px 0 -20px -40px;
+}
+ #diet {
+    font-size: 80%;
+  }
+#submit:hover {
+  cursor: pointer;
+  color: blue;
+  font-weight: 100;
+  font-size: 20px;
+  background: yellow;
+}
+.checkbox, input {
+  text-align: row;/*todo
+  cursor: pointer;
+  margin: 5px -180px 0 0;
+}
+#form-control {
+  width: 70px;
+  text-align: left;
+  padding-left: 5px
+}
+#days {
+  font-size: 80%;
+  color: #000;
+}
+#comments {
+  font-size:100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+#thanks {
+  color: #000;
+}
+.copyright {
+    margin-top: 70px;
+    background: #0000ff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    font-size: 100%;
+    text-align: center;
+}
+@media screen and (max-width: 768px) { /*mobile mode
+
+#main {
+    width: 90%;
+    margin: auto;
+}
+  #title {
+      font-size: 200%;
+      /*color: #0000ff;
+      font-weight: 100;
+      text-transform: uppercase;
+}
+  #description {
+      font-size: 100%;
+}
+.copyright {
+    font-size: 70%;
+    }
+}*/

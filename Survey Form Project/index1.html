@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda" type="text/css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+  src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </head>
+  <body>
+    <main id="main">
+      <header>
+        <h1 id="title">11-16 Summer Break Survey Form</h1>
+        <hr>
+        <p id="description">Keeping your kids active during the school Summer break</p>
+      </header>
+<div id="container">
+  <form id="survey-form" action="#" name="surveyForm" onsubmit="return validateName()" method="post">
+          <div class="row">
+            <div class="col-25">
+          <label for="name-label" id="name-label"><em>First Name: *</em></label> <!--validate no numbersand length-->
+            </div>
+           <div class="col-75">
+            <input type="text" id="name" name="firstname"
+ placeholder="enter first mame.." pattern="[A-Za-z]{1,25}" required>
+           </div>
+          </div>
+        <div class="row">
+          <div class="col-25">
+        <label for="lname-label" id="lname-label"><em>Last Name: *</em></label> <!--validate no numbers and length-->
+            </div>
+           <div class="col-75">
+          <input type="text" id="lname" name="lastname" placeholder="enter last mame.." pattern="[A-Za-z]{1,15}"required>
+      </div>
+     </div>
+       <div class="row">
+         <div class="col-25">
+          <label for="number-label" id="number-label"><em>Age: *</em></label>
+         </div><!--validate minmax and numbers only-->
+         <div class="col-75">
+            <input type="number" id="number" name="age" placeholder="select age" min="11" max="16" required>
+         </div>
+        </div>
+       <div class="row">
+        <div class="col-25">
+          <label for="email-label" id="email-label"><em>Email: *</em></label>
+         </div>
+        <div class="col-75"><!--validate correct format-->
+            <input type="email" id="email" name="email" placeholder="enter email" required>
+       </div>
+    </div>
+    <div>
+      <p id="required"><em> * required</em></p>
+    </div>
+      <p id="phone">Please enter your phone number without spaces (11-13 digits):</p>
+    <div class="row">
+      <div class="col-25">
+        <label for="tel-label" id="tel-label"><em>Phone:</em></label>
+        </div>
+        <div class="col-75">
+        <!--validate minmax and numbers only, option for area code '+'-->
+            <input type="tel" id="tel" name="phone" placeholder="enter number" pattern='^\+?\d{11,13}' required>
+        </div>
+      </div>
+      <div>
+          <fieldset type="radio-buttons" id="radio-buttons">
+          <p>What activities did you enjoy the most?</p>
+          <p id="options"><em>choose an option from below</em>:</p>
+         <ul style="list-style: none;">
+          <li class="radio">
+          <label for="indoor-activities">Indoor-activities
+            <input name="indoor activities-outdoor activities" value="1" type="radio"></label><br>
+            </li>
+          <li class="radio">
+          <label for="outdoor-activities">Outdoor-activities
+            <input name="indoor activities-outdoor activities" value="2" type="radio"></label>
+            </li>
+          </div>
+        </fieldset>
+        <div><br>
+          <p>What activities would you like to see added next Summer?<p/>
+          <p id="interests"><strong>Interests</strong>: <em>choose all those that apply</em>.</p>
+        </div>
+            <label class="container">Sking
+  <input type="checkbox" value="interests">
+  <span class="checkmark"></span>
+</label>
+          <label class="container">Absailing
+            <input type="checkbox" value="interests">
+            <span class="checkmark"></span>
+            </label>
+          <label class="container">Swimming
+            <input type="checkbox" value="interests">
+            <span class="checkmark"></span>
+            </label>
+          <label class="container">Horseriding
+            <input type="checkbox" value="interests">
+            <span class="checkmark"></span>
+            </label>
+          <label class="container">Hairdressing
+            <input type="checkbox" value="interests">
+            <span class="checkmark"></span>
+            </label>
+          <label class="container">Singing
+            <input type="checkbox" value="interests">
+            <span class="checkmark"></span>
+            </label>
+          <label class="container">Judo
+            <input type="checkbox" value="interests">
+            <span class="checkmark"></span>
+            </label>
+          <label class="container">Poetry Challenge
+            <input type="checkbox" value="interests">
+            <span class="checkmark"></span>
+            </label>
+
+          <p>Select an activity time you prefer for each choice above respectively:</p><!--morning or afternoon-->
+   <div class="form-group">
+     <label for="preftimes" id="preftimes"><em>Days and Times</em>:</label>
+    <select id="form-control" name="preftimes" size="3" multiple>
+              <option value="Mon am">Mon am</option>
+              <option value="Mon pm">Mon pm</option>
+              <option value="Tue am">Tue am</option>
+              <option value="Tue pm">Tue pm</option>
+              <option value="Weds am">Weds am</option>
+              <option value="Weds pm">Weds pm</option>
+              <option value="Thurs am">Thurs am</option>
+              <option value="Thurs pm">Thurs pm</option>
+              <option value="Fri am">Fri am</option>
+              <option value="Fri pm">Fri pm</option>
+    </select>
+        <p id="days"><em>(Hold down the Ctrl (windows) / Command (Mac) key to select multiple options)</em>.</p><br>
+    </div>
+    <div class="dropdown-menu">
+      <label for="lunch"><em>Lunch Options</em>:</label>
+    <p id="lunch">What lunches did your prefer?</p>
+      <p id="diet"><em>(Select a dietary lunch option from the dropdown menu below)</em>.</p><br><!--vegitarian, vegan, meat -->
+      <select id="dropdown" name="lunch">
+        <option disabled choice value>Choose an option</option>
+          <option value="meat & veg">Meat and Veg</option>
+            <option value="vegetarian">Vegitarian</option>
+              <option value="halal">Halal</option>
+                <option value="vegan">Vegan</option>
+      </select>
+    </div><br><br>
+        <div class="row">
+          <div class="col-25">
+            <label for="comments-label"><em>Comments</em>:</label>
+          </div>
+            <div class="col-75">
+            <!--<label for="comments-input">Comments:-->
+        <textarea id="comments-label" name="comments-label" placeholder="additional info.." style="height:200px"></textarea>
+          </div><br>
+        </div>
+      <p id="thanks">Thank you for completing the survey.  Your views will help us to improve our service for next year.</p>
+     <div>
+      <button id="submit" type="submit">Submit</button>
+    </div>
+  </form>
+ </div>
+</main>
+    <script src="js/index.js"></script>
+    <footer class="copyright">
+      <p>Summer Holiday Actvities, Copyright &copy; 2018</p>
+    </footer>
+ </body>
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda" type="text/css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="css/index1.css" rel="stylesheet" type="text/css"/>
+    <script
+  src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </head>
+  <body>
+    <main id="main">
+      <header>
+        <h1 id="title">11-16 Summer Break Survey Form</h1>
+        <hr>
+        <p id="description">Keeping your kids active during the school Summer break</p>
+      </header>
+<!--<div id="container">
+  <form id="survey-form" action="#" name="surveyForm" onsubmit="return validateName()" method="post">
+          <div id="name-input">
+          <label for="name-label" id="name-label"><em>First Name: *</em> <!--validate no numbers
+            <input id="name" placeholder="enter first mame" type="text" pattern="[A-Za-z]{1,25}"required>
+            </label><br>
+        </div>
+        <div id="lname-input">
+        <label for="lname-label" id="lname-label"><em>Last Name: *</em> <!--validate no numbers
+          <input id="lname" placeholder="enter last mame" type="text" pattern="[A-Za-z]{1,15}"required>
+        </label><br>
+      </div>
+        <div id="number-input">
+          <label for "number-label" id="number-label"><em>Age: *</em>  <!--validate minmax and numbers only
+            <input id="number" placeholder="enter age" type="number" min="11" max="16" required>
+          </label><br>
+        </div>
+        <div id="email-input">
+          <label for="email-label" id="email-label"><em>Email: *</em> <!--validate correct format
+            <input id="email" placeholder="enter email" type="email" required>
+            <p id="required"> * required</p>
+          </label>
+        </div>
+          <p>Please input your phone number with no spaces:</p>
+          <!--<p id="phone"></p>
+          <div id="tel-input">
+          <label for "tel-label" id="tel-label"><em>Phone:</em>  <!--validate minmax and numbers only option for area code '+'
+            <input id="tel" placeholder="enter number" type="tel" pattern='^\+?\d{11,13}' required>
+          </label><br>
+        </div>
+      <!--</div>
+          <fieldset>
+          <p>What activities did you enjoy the most?</p>
+          <p id="options"><em>choose an option from below</em>:</p>
+            <ul style="list-style: none;">
+          <li class="radio">
+          <label for="indoor-activities"> Indoor-activities
+            <input name="indoor activities-outdoor activities" value="1" type="radio"></label><br>
+            </li>
+          <li class="radio">
+          <label for="outdoor-activities"> Outdoor-activities
+            <input name="indoor activities-outdoor activities" value="2" type="radio"></label><br><br>
+            </li>
+        </fieldset>
+        <div><br>
+          <p>What activities would you like to see added next Summer?<p/>
+          <p id="interests"><strong>Interests</strong>: <em>choose those that apply</em>.</p>
+        </div>
+        <div class="checkbox">
+          <label for="sking">
+            <input type="checkbox" value="interests">Sking</label>
+          <label for="Absailing">
+            <input type="checkbox" value="interests">Absailing</label>
+          <label for="swimming">
+            <input type="checkbox" value="interests">Swimming</label>
+          <label for="horseriding">
+            <input type="checkbox" value="interests">Horseriding</label>
+          <label for="hairdressing">
+            <input type="checkbox" value="interests">Hairdressing</label>
+          <label for="singing">
+            <input type="checkbox" value="interests">Singing</label>
+          <label for="judo">
+            <input type="checkbox" value="interests"checked>Judo</label>
+          <label for="Poetry Challenge">
+            <input type="checkbox" value="interests">Poetry Challenge</label>
+        </div><br>
+          <p>Select an activity time you prefer for each choice above respectively:</p><!--morning or afternoon
+   <div class="form-group">
+        <label for="preftimes">Days and Times:</label>
+    <select id="form-control" name="preftimes" size="3" multiple>
+              <option value="Mon am">Mon am</option>
+              <option value="Mon pm">Mon pm</option>
+              <option value="Tue am">Tue am</option>
+              <option value="Tue pm">Tue pm</option>
+              <option value="Weds am">Weds am</option>
+              <option value="Weds pm">Weds pm</option>
+              <option value="Thurs am">Thurs am</option>
+              <option value="Thurs pm">Thurs pm</option>
+              <option value="Fri am">Fri am</option>
+              <option value="Fri pm">Fri pm</option>
+    </select>
+        <p id="days"><em>(Hold down the Ctrl (windows) / Command (Mac) key to select multiple options)</em>.</p><br>
+    </div>
+    <div class="dropdown-menu">
+            <label for="lunch">Lunch Options:</label>
+        <p>What lunches did your prefer?</p>
+      <p id="diet"><em>(Select a dietary lunch option from the dropdown menu below)</em></p><!--vegitarian, vegan, meat
+      <select id="dropdown" name="lunch">
+        <option disabled choice value>Choose an option</option>
+          <option value="meat & veg">Meat and Veg</option>
+            <option value="vegetarian">Vegitarian</option>
+              <option value="halal">Halal</option>
+                <option value="vegan">Vegan</option>
+      </select>
+    </div>
+          <h3 id="comments" type="text">Additional comments:</h3>
+          <div id="comments-label">
+            <!--<label for="comments-input">Comments:-
+        <textarea input id="comments" placeholder="additional info:" type="text" name="comments" id="extra-info" style="width:300px; height:100px">
+       </textarea>
+            </label>
+          </div><br>
+      <div>
+      <p id="thanks">Thank you for completing the survey.  Your views will help us to improve our service for next year.</p>
+      <button id="submit" type="submit">Submit</button>
+    </div>
+  </form>
+ </main>
+    <script src="js/index1.js"></script>
+    <footer class="copyright">
+      <p>Summer Holiday Actvities, Copyright &copy; 2018</p>
+    </footer>
+ </body>
+</html>-->
